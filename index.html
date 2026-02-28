@@ -379,9 +379,26 @@
   background-color: var(--dark-bg);
 }
 </style>
+    <script>
+// This script removes the # from the URL after clicking a link
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    
+    // Smooth scroll to the section
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+
+    // Clean the URL without reloading the page
+    window.history.pushState(null, null, ' ');
+  });
+});
+</script>
 </body>
 
 </html>
+
 
 
 
