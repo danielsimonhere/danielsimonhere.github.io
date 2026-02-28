@@ -174,11 +174,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             margin-bottom: 2rem;
-            
-            /* Add this line: Ensures smooth hover effects on stack */
-            position: relative; 
-
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-left 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
@@ -422,22 +418,7 @@
             <p style="font-size: 1.1rem; color: var(--text-main);">I'm originally from Chennai, currently living and working in Bengaluru. When I'm not architecting project lifecycles or walking the manufacturing floor, I'm usually exploring the city, practicing my Spanish and Korean, or relentlessly defending my ELO rating on Chess.com.</p>
         </div>
     </section>
-    /* Neon Glow Effect on Hover */
-        .card:hover {
-            transform: translateY(-10px); /* Keep the existing lift effect */
-            
-            /* Apply the primary corporate blue as the shadow */
-            box-shadow: 0 12px 20px rgba(0,0,0,0.1), /* The original soft shadow */
-                        0 0 15px rgba(37, 99, 235, 0.7), /* Neon Inner Glow */
-                        0 0 25px rgba(37, 99, 235, 0.5), /* Neon Middle Glow */
-                        0 0 35px rgba(37, 99, 235, 0.3); /* Neon Outer Bloom */
-            
-            /* Add the left border accent we planned */
-            border-left: 5px solid var(--primary-color);
-            
-            /* This makes the transition feel premium */
-            transition: all 0.4s ease-out;
-        }
+
     <footer>
         <p>Daniel Simon | Bengaluru, Karnataka | +91 6369535081</p>
     </footer>
@@ -457,5 +438,4 @@
     </script>
 </body>
 </html>
-
 
