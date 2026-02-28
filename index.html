@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Simon | Program Manager</title>
+    <style>
+        /* CSS Styles */
+        :root {
+            --primary-color: #2563eb;
+            --dark-bg: #0f172a;
+            --light-bg: #f8fafc;
+            --text-main: #334155;
+            --text-light: #94a3b8;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: var(--light-bg);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--dark-bg);
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--white);
+        }
+
+        /* Sections General */
+        section {
+            padding: 5rem 10%;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            color: var(--dark-bg);
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Hero Section */
+        #hero {
+            background-color: var(--white);
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #hero h1 {
+            font-size: 4rem;
+            color: var(--dark-bg);
+            margin-bottom: 0.5rem;
+        }
+
+        #hero h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            border: none;
+            margin-bottom: 1.5rem;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            color: var(--text-main);
+            margin-bottom: 2rem;
+        }
+
+        .contact-links a {
+            display: inline-block;
+            margin-right: 1.5rem;
+            color: var(--white);
+            background-color: var(--primary-color);
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .contact-links a:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* Experience & Projects Cards */
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: var(--dark-bg);
+        }
+
+        .card h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .card ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Grid for Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-bg);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            #hero h1 { font-size: 2.5rem; }
+            #hero h2 { font-size: 1.5rem; }
+            section { padding: 3rem 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>Daniel Simon</h1>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <h1>Daniel Simon</h1>
+        <h2>Program Manager</h2>
+        <p>I solve operational friction within complex hardware lifecycles. By architecting scalable Agile frameworks, I eliminate information silos between the manufacturing floor, specialized technical teams, and founders, transforming cross-functional chaos into streamlined execution.</p>
+        <div class="contact-links">
+            <a href="mailto:danielsimonhere@gmail.com">Email Me</a>
+            <a href="https://www.linkedin.com/in/danielsimonhere" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+
+        <div class="card">
+            <h3>Project Coordinator / Program Manager</h3>
+            <h4>Flux Auto | Bengaluru, Karnataka</h4>
+            <ul>
+                <li><strong>Architecting PM Infrastructure:</strong> Designed and deployed centralized, Hybrid-Agile tracking frameworks from the ground up to manage complex automotive engineering lifecycles.</li>
+                <li><strong>Cross-Functional Alignment:</strong> Act as the central bridge between specialized technical departments (Test-Ops, Control/Stack teams) and executive leadership to ensure transparent, real-time visibility into project health.</li>
+                <li><strong>Operational Optimization:</strong> Evaluate, procure, and implement enterprise-grade project management tools to eliminate information silos and standardize deliverable tracking across the organization.</li>
+                <li><strong>Dependency Management:</strong> Identify bottlenecks and resolve operational friction between hardware development, software integration, and testing phases to accelerate deployment.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Associate Program Manager</h3>
+            <h4>Bounce Infinity | Bengaluru, Karnataka</h4>
+            <ul>
+                <li><strong>Workflow Standardization:</strong> Built and implemented an advanced, highly optimized master tracking system in Google Sheets that became the legacy framework for the entire PM organization.</li>
+                <li><strong>Manufacturing & Corporate Synchronization:</strong> Conducted regular on-site plant audits to eliminate communication gaps between the corporate Head Office and the manufacturing floor, aligning production timelines with business goals.</li>
+                <li><strong>Strategic Vendor & Partner Sourcing:</strong> Collaborated with international vendors to evaluate, localize, and design new vehicle models, directly expanding both B2C and B2B product portfolios.</li>
+                <li><strong>Complex Ecosystem Management:</strong> Orchestrated the integration and program coordination across multiple key battery technology partners, including co-leading the strategic "Bounce x Sun Mobility" e1 vehicle rollout in a dual-manager structure.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+
+        <div class="card">
+            <h3>B2B Fleet Integration & Ecosystem Rollout</h3>
+            <h4>Bounce Infinity | Co-Lead / Associate Program Manager</h4>
+            <ul>
+                <li><strong>The Challenge:</strong> Transitioning from a B2C to a B2B model required integrating a complex new battery partner ecosystem into the vehicle architecture. The rollout of the e1 vehicles demanded seamless alignment between the corporate Head Office, the manufacturing plant, and external stakeholders.</li>
+                <li><strong>The Action:</strong> Orchestrated the end-to-end program coordination across technical and operational teams. Conducted regular on-site plant audits to eliminate communication silos between engineering and manufacturing. Co-led the strategic partnership, acting as the primary translator between hardware realities and business deliverables.</li>
+                <li><strong>The Result:</strong> Successfully deployed the e1 B2B fleet on schedule. The project proved the viability of the new battery ecosystem and established a replicable integration framework for future B2B vendor partnerships.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Enterprise PM Framework Standardization</h3>
+            <h4>Bounce Infinity | Associate Program Manager</h4>
+            <ul>
+                <li><strong>The Challenge:</strong> Program Managers and cross-functional teams lacked a unified, centralized system to track complex hardware manufacturing lifecycles. This caused operational friction, delayed reporting, and created critical information silos.</li>
+                <li><strong>The Action:</strong> Designed and engineered an advanced, highly optimized master tracking system in Google Sheets from the ground up. Customized the architecture specifically for EV manufacturing workflows to track real-time deliverable statuses and identify bottlenecks.</li>
+                <li><strong>The Result:</strong> The system completely eliminated tracking redundancies and was universally adopted across the organization. It stands today as the legacy framework utilized by all past and present Program Managers at the company.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills & Education</h2>
+        
+        <div class="skills-grid">
+            <div class="card">
+                <h3>Technical & PM Skills</h3>
+                <br>
+                <ul>
+                    <li><strong>Methodologies:</strong> Agile & Scrum, Hybrid-Agile Lifecycle Management, Cross-Functional Dependency Mapping</li>
+                    <li><strong>Automotive & Hardware:</strong> EV Architecture, New Product Development (NPD), Battery Ecosystem Integration</li>
+                    <li><strong>Software Ecosystems:</strong> Jira, Huly, Bitrix24, Hive, ZohoProjects, Google Sheets (Advanced)</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Education & Certifications</h3>
+                <br>
+                <ul>
+                    <li><strong>B.Tech in Automobile Engineering</strong><br>Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology (CGPA: 7.83)</li>
+                    <li><strong>Google Project Management Certificate</strong></li>
+                    <li><strong>Google AI Professional Certification</strong> (In Progress)</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>Languages</h3>
+                <br>
+                <ul>
+                    <li><strong>English & Tamil:</strong> Bilingual Fluency</li>
+                    <li><strong>Hindi:</strong> Intermediate Fluency</li>
+                    <li><strong>Spanish & Korean:</strong> Conversational / Learning</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Daniel Simon | Bengaluru, Karnataka | +91 6369535081</p>
+    </footer>
+
+</body>
+</html>
