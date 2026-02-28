@@ -192,6 +192,35 @@
             #hero h2 { font-size: 1.5rem; }
             section { padding: 3rem 5%; }
         }
+        /* Skill Bars */
+.skill-bar {
+    background-color: #e2e8f0;
+    height: 10px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.skill-per {
+    background-color: var(--primary-color);
+    height: 100%;
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+}
+
+/* Software Badges */
+.software-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.badge {
+    background: var(--dark-bg);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
     </style>
 </head>
 <body>
@@ -275,9 +304,27 @@
                 <h3>Technical & PM Skills</h3>
                 <br>
                 <ul>
-                    <li><strong>Methodologies:</strong> Agile & Scrum, Hybrid-Agile Lifecycle Management, Cross-Functional Dependency Mapping</li>
-                    <li><strong>Automotive & Hardware:</strong> EV Architecture, New Product Development (NPD), Battery Ecosystem Integration</li>
-                    <li><strong>Software Ecosystems:</strong> Jira, Huly, Bitrix24, Hive, ZohoProjects, Google Sheets (Advanced)</li>
+                   <div class="card">
+    <h3>Technical & PM Skills</h3>
+    <div class="skill-container">
+        <p>Agile & Scrum Frameworks</p>
+        <div class="skill-bar"><div class="skill-per" style="width: 95%;"></div></div>
+        
+        <p>Hybrid-Agile Lifecycle Management</p>
+        <div class="skill-bar"><div class="skill-per" style="width: 90%;"></div></div>
+        
+        <p>EV Architecture & Hardware</p>
+        <div class="skill-bar"><div class="skill-per" style="width: 85%;"></div></div>
+    </div>
+    <br>
+    <h4>Software Ecosystem</h4>
+    <div class="software-badges">
+        <span class="badge">Jira</span>
+        <span class="badge">Huly</span>
+        <span class="badge">Bitrix24</span>
+        <span class="badge">Google Sheets</span>
+    </div>
+</div>
                 </ul>
             </div>
 
@@ -335,6 +382,7 @@
 </body>
 
 </html>
+
 
 
 
