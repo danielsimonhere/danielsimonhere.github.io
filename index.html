@@ -131,13 +131,21 @@
         }
 
         /* Experience & Projects Cards */
-        .card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
-        }
+       .card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+    /* This makes the movement smooth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+    border-left: 5px solid var(--primary-color);
+}
 
         .card h3 {
             font-size: 1.5rem;
@@ -302,5 +310,6 @@
 </body>
 
 </html>
+
 
 
