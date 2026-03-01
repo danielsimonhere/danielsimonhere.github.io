@@ -109,37 +109,54 @@
             padding-bottom: 0.5rem;
         }
 
-        /* Hero Section */
-        #hero {
-            background-color: transparent;
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+        /* Consolidated Hero Section CSS - Replaces Old Version */
+#hero {
+    background-color: transparent; /* Changed from white to transparent to show the background data visualization */
+    height: 80vh;
+    display: flex;
+    flex-direction: row; /* CRITICAL: Changed from column to row! This moves items side-by-side */
+    justify-content: space-around; /* Distributes items on the left and right */
+    align-items: center; /* Vercically centers the text and image containers against each other */
+    padding: 5rem 10%;
+}
 
-        #hero h1 {
-            font-size: 4rem;
-            color: var(--white);
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-        }
+/* New CSS for the Text Container (Purple Area) */
+.hero-text-container {
+    flex: 1; /* Takes up half the available width */
+    max-width: 60%; /* Prevents text from being too long on super wide screens */
+    padding-right: 50px; /* Spacing between text and picture */
+}
 
-        #hero h2 {
-            font-size: 2rem;
-            color: #60a5fa; 
-            border: none;
-            margin-bottom: 1.5rem;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-        }
+/* New CSS for the Image Container (Green Circle Area) */
+.hero-image-container {
+    flex: 1; /* Takes up other half */
+    display: flex;
+    justify-content: center; /* Horizontally centers the image within its half */
+}
 
-        #hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            color: #e2e8f0;
-            margin-bottom: 2rem;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-        }
+/* Retaining and changing your existing heading and paragraph colors for a dark background */
+#hero h1 {
+    font-size: 4rem;
+    color: var(--white); /* Replaces var(--dark-bg) for a dark background */
+    margin-bottom: 0.5rem;
+    text-align: left; /* Keep left alignment */
+}
+
+#hero h2 {
+    font-size: 2rem;
+    color: #a855f7; /* Replaces var(--primary-color) for a high-tech purple accent */
+    border: none;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    color: var(--text-light); /* Replaces var(--text-main) for better readability on dark backgrounds */
+    margin-bottom: 2rem;
+    text-align: left;
+}
 
         .profile-img {
             width: 200px;
@@ -300,15 +317,20 @@
     </nav>
 
     <section id="hero">
-        <img src="profile.jpg" alt="Daniel Simon" class="profile-img">
+    <div class="hero-text-container">
         <h1>Daniel Simon</h1>
         <h2>AI-Augmented Program Manager</h2>
         <p>I solve operational friction within complex hardware lifecycles. By architecting scalable Agile frameworks, I eliminate information silos between the manufacturing floor and technical teams, transforming cross-functional chaos into streamlined execution. I am now leveraging Generative AI to automate project documentation and predictive risk modeling, ensuring hardware lifecycles move even faster.</p>
         <div class="contact-links">
-            <a href="mailto:danielsimonhere@gmail.com">Email Me</a>
-            <a href="https://www.linkedin.com/in/danielsimonhere" target="_blank">LinkedIn</a>
+            <a href="mailto:..." class="contact-links-btn btn-primary">Email Me</a>
+            <a href="https://..." class="contact-links-btn btn-primary">LinkedIn</a>
         </div>
-    </section>
+    </div>
+
+    <div class="hero-image-container">
+        <img src="..." class="profile-img">
+    </div>
+</section>
 
     <section id="philosophy">
         <h2>My PM Philosophy: "Floor-First" Planning</h2>
@@ -447,6 +469,7 @@
     </script>
 </body>
 </html>
+
 
 
 
