@@ -109,68 +109,76 @@
             padding-bottom: 0.5rem;
         }
 
-        /* Consolidated Hero Section CSS - Replaces Old Version */
-#hero {
-    background-color: transparent; /* Changed from white to transparent to show the background data visualization */
-    height: 80vh;
-    display: flex;
-    flex-direction: row; /* CRITICAL: Changed from column to row! This moves items side-by-side */
-    justify-content: space-around; /* Distributes items on the left and right */
-    align-items: center; /* Vercically centers the text and image containers against each other */
-    padding: 5rem 10%;
-}
-
-/* New CSS for the Text Container (Purple Area) */
-.hero-text-container {
-    flex: 1; /* Takes up half the available width */
-    max-width: 60%; /* Prevents text from being too long on super wide screens */
-    padding-right: 50px; /* Spacing between text and picture */
-}
-
-/* New CSS for the Image Container (Green Circle Area) */
-.hero-image-container {
-    flex: 1; /* Takes up other half */
-    display: flex;
-    justify-content: center; /* Horizontally centers the image within its half */
-}
-
-/* Retaining and changing your existing heading and paragraph colors for a dark background */
-#hero h1 {
-    font-size: 4rem;
-    color: var(--white); /* Replaces var(--dark-bg) for a dark background */
-    margin-bottom: 0.5rem;
-    text-align: left; /* Keep left alignment */
-}
-
-#hero h2 {
-    font-size: 2rem;
-    color: #a855f7; /* Replaces var(--primary-color) for a high-tech purple accent */
-    border: none;
-    margin-bottom: 1.5rem;
-    text-align: left;
-}
-
-#hero p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    color: var(--text-light); /* Replaces var(--text-main) for better readability on dark backgrounds */
-    margin-bottom: 2rem;
-    text-align: left;
-}
-
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1.5rem;
-            border: 4px solid var(--primary-color);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+/* ----------------------------------------------------------- */
+        /* --- 1. Consolidated PC (Landscape) Styles (The neat mode) --- */
+        /* ----------------------------------------------------------- */
+        
+        #hero {
+            background-color: transparent; /* Allows video to show through */
+            height: 80vh;
+            display: flex;
+            flex-direction: row; /* CRITICAL: Side-by-side layout for PC */
+            justify-content: space-around; /* Distributes items left and right */
+            align-items: center; /* Vertically centers text and image */
+            padding: 5rem 10%; /* PC padding from image 2 */
         }
 
-        .contact-links a {
+        .hero-text-container {
+            flex: 1; /* Takes up half width */
+            max-width: 60%; /* Prevents text from being too long */
+            padding-right: 50px; /* Spacing from image */
+        }
+
+        .hero-image-container {
+            flex: 1; /* Takes up other half */
+            display: flex;
+            justify-content: center; /* Horizontally centers image in its half */
+        }
+
+        #hero h1 {
+            font-size: 4rem; /* Big PC heading size from image 2 */
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            text-align: left; /* Keep left alignment */
+        }
+
+        #hero h2 {
+            font-size: 2rem;
+            color: #60a5fa; /* High-tech blue accent for PMP from image 2 */
+            border: none;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+            text-align: left;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            color: #e2e8f0;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+            text-align: left;
+        }
+
+        .profile-img {
+            width: 320px; /* PC commanding size */
+            height: 320px;
+            border-radius: 24px; /* Premium Rounded Square shape */
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1.5rem; /* modern spacing for buttons */
+        }
+
+        /* Basic PC button styles based on your contact-links design */
+        .btn {
             display: inline-block;
-            margin-right: 1.5rem;
             color: var(--white);
             background-color: var(--primary-color);
             padding: 0.8rem 1.5rem;
@@ -180,10 +188,73 @@
             transition: background 0.3s;
         }
 
-        .contact-links a:hover {
+        .btn:hover {
             background-color: #1d4ed8;
         }
 
+        /* ----------------------------------------------------------- */
+        /* --- 2. The Formidable Mobile (Portrait) Styles (The neat mode fix!) --- */
+        /* ----------------------------------------------------------- */
+        
+        /* This media query only applies to screens narrower than 768px (like mobiles) */
+        @media (max-width: 768px) {
+            
+            /* Add this block to your existing media query or paste this new one at the end of style */
+            #hero {
+                flex-direction: column; /* CRITICAL: Switches from row to stacked (column) layout */
+                height: auto; /* Allow content to set the height on mobile */
+                padding-top: 8rem; /* Space from the sticky nav */
+                justify-content: flex-start; /* aligns from top of the section */
+            }
+
+            .hero-text-container {
+                max-width: 100%; /* Full width */
+                padding-right: 0; /* Clear PC padding */
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Center column contents (headings and paragraph) */
+                order: 2; /* Crucial: Puts text SECOND in stacked layout */
+            }
+
+            .hero-image-container {
+                width: 100%;
+                margin-top: 2rem; /* adds some spacing before the stacked picture */
+                order: 1; /* Crucial: Puts image FIRST in stacked layout so PFP is visible */
+            }
+
+            /* Responsive typography to keep text looking clean as seen in portrait mode (Image 1) */
+            #hero h1 { 
+                font-size: 2.5rem; /* Sized down for mobile (from your snippet) */
+                text-align: center; /* Center all hero text on mobile for that clean, neat portrait look */
+            }
+            #hero h2 { 
+                font-size: 1.5rem; /* Sized down for mobile */
+                text-align: center; 
+            }
+            #hero p {
+                text-align: center;
+                font-size: 1rem; /* size down slightly on mobile for readability */
+            }
+
+            .profile-img {
+                width: 180px; /* Size down slightly for mobile portrait view */
+                height: 180px;
+                /* Note: We are not changing the 24px border-radius, it stays as a rounded square on mobile */
+            }
+
+            .contact-links {
+                justify-content: center; /* center the buttons together on mobile portrait view */
+                margin-bottom: 2rem;
+            }
+
+            /* Basic PC button styles on mobile portrait view */
+            .btn {
+               font-size: 0.9rem; /* sizing buttons slightly smaller for phone screens */
+            }
+            
+            /* Responsive sections padding from image 1 */
+            section { padding: 3rem 5%; }
+        }
         /* Experience & Projects Cards */
         .card {
             background: var(--white);
@@ -321,10 +392,10 @@
         <h1>Daniel Simon</h1>
         <h2>AI-Augmented Program Manager</h2>
         <p>I solve operational friction within complex hardware lifecycles. By architecting scalable Agile frameworks, I eliminate information silos between the manufacturing floor and technical teams, transforming cross-functional chaos into streamlined execution. I am now leveraging Generative AI to automate project documentation and predictive risk modeling, ensuring hardware lifecycles move even faster.</p>
-        <div class="contact-links">
-            <a href="mailto:..." class="contact-links-btn btn-primary">Email Me</a>
-            <a href="https://..." class="contact-links-btn btn-primary">LinkedIn</a>
-        </div>
+       <div class="contact-links">
+                <a href="mailto:danielsimonhere@gmail.com" class="btn">Email Me</a>
+                <a href="https://www.linkedin.com/in/danielsimonhere" target="_blank" class="btn">LinkedIn</a>
+            </div>
     </div>
 
     <div class="hero-image-container">
@@ -469,14 +540,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
